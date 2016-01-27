@@ -14,6 +14,8 @@
   "main": "index.html",
   "scripts": {
     "start": "gulp",
+    "production": "gulp --type production",
+    "production:build": "gulp build --type production",
     "test": "karma start"
   },
   "author": "@sabarasaba <rivasign@gmail.com>",
