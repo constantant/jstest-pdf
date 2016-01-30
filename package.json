@@ -1,16 +1,7 @@
 {
-  "name": "modern-backbone-starterkit",
-  "version": "0.3.0",
-  "description": "Lightweight starting point for a modern backbone web app.",
-  "keywords": [
-    "backbone",
-    "starterkit",
-    "frontend",
-    "boilerplate",
-    "marionette",
-    "es6",
-    "webpack"
-  ],
+  "name": "jstest-pdf",
+  "version": "0.0.1",
+  "description": "Тестовое задание: https://dl.dropboxusercontent.com/u/27723272/jstest.pdf",
   "main": "index.html",
   "scripts": {
     "start": "gulp",
@@ -18,11 +9,11 @@
     "production:build": "gulp build --type production",
     "test": "karma start"
   },
-  "author": "@sabarasaba <rivasign@gmail.com>",
+  "author": "Konstantin Kharitonov <constantant1@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/sabarasaba/modern-backbone-starterkit.git"
+    "url": "git://github.com/constantant/jstest-pdf.git"
   },
   "devDependencies": {
     "babel-core": "^6.1.2",

@@ -1,4 +1,128 @@
 @import 'normalize'
 
-#js-app
+body
+.test
+.test-person-info
+.test-person-info-aside
+.test-person-info-content
+.test-person-list
+.test-person-item
+.test-person-item-name
+.test-person-item-age
+.test-person-nav
+.test-person-nav-prev
+.test-person-nav-next
+.test-person-nav-current
+  display flex
+
+html
+body
+  height 100%
+
+body
+  flex-direction column
+  align-items center
+  align-content center
+
+.test
+  flex-direction column
+  align-items stretch
+  align-content stretch
+  margin auto
+
+.test-person-info
+  flex-grow 1
+  align-items stretch
+  justify-content space-between
+  margin-bottom 20px
+  min-height 300px
+
+.test-person-info-aside
+.test-person-info-content
+  flex-direction column
+
+.test-person-info-aside
+  align-items left
+  width 138px
+  background-color #aaa
+  padding 20px 10px
+
+.test-person-info-content
+  align-items center
+  align-content stretch
+  flex-grow 10
+  background-color #eee
+  padding 40px 20px;
+
+.test-person-list
+.test-person-nav
+  user-select none
+
+.test-person-list
+  align-items stretch
+  justify-content space-between
+  background-color #aaa
+
+.test-person-item
+  flex-grow 1
+  flex-basis 1
+  flex-direction column
+  align-items center
+  align-content center
+  background-color #eee
+  text-decoration none
+  color #000
+  width 100px
+  margin-left 1px
+  padding 10px
+  border 8px solid transparent
+  overflow hidden
+
+.test-person-item:first-child
+  margin-left 0
+
+.test-person-item:hover
+  background-color #ddd
+
+.test-person-item.current
+  border-color #aaa
+
+.test-person-item-name
+.test-person-item-age
+  padding 5px 0
+  overflow hidden
+  text-overflow ellipsis
+
+.test-person-item-name
+  margin auto auto 0 auto
   font-size 20px
+
+.test-person-item-age
+  margin 0 auto auto auto
+
+.test-person-nav
+  flex-direction row
+  align-items center
+  align-content center
+  margin 20px auto
+
+.test-person-nav-prev
+.test-person-nav-next
+  font-size 30px
+  color #999
+  text-decoration none
+
+.test-person-nav-prev:hover
+.test-person-nav-next:hover
+  color #000
+
+.test-person-nav-current
+  margin 0 10px
+
+.test-person-info-aside-data
+  margin-bottom 10px
+  font-size 18px
+  color #fff
+
+.test-person-info-content-data
+  font-size 50px

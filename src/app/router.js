@@ -1,32 +1,33 @@
-import $ from 'jquery';
-import Backbone from 'backbone';
+import settings from './settings';
 
-import HelloView from './views/hello';
-
+//let $ = require('jquery');
+let Backbone = require('backbone');
 
 export default Backbone.Router.extend({
 
-  routes: {
-    '': 'dashboard',
-    'about': 'about'
-  },
+    routes: {
+        '': 'start',
+        ':id': 'showPersonInfo'
+    },
 
-  initialize() {
-    $('body').append('<div id="js-app"></div>');
-  },
+    initialize(app) {
+        this.app = app;
+    },
 
-  dashboard() {
-    var helloView = new HelloView().render();
+    start() {
+        var defaultPerson = this.app.persons.at(settings.defaultPersonIndex);
 
-    $('#js-app').empty().append(helloView.$el);
-  },
+        Backbone.history.navigate(
+            '#/' + defaultPerson.get('id'),
+            {
+                trigger: true,
+                replace: false
+            }
+        );
+    },
 
-  about() {
-    var helloView = new HelloView({
-      template: _.template('Im the about page')
-    }).render();
-
-    $('#js-app').empty().append(helloView.$el);
-  }
+    showPersonInfo(id) {
+        this.app.setPersonById(id);
+    }
 
 });
