@@ -1,6 +1,6 @@
-import $ from 'jquery';
-import Backbone from 'backbone';
-import chai from 'chai';
+let $ = require('jquery');
+let Backbone = require('backbone');
+let chai = require('chai');
 
 let expect = chai.expect;
 

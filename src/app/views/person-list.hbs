@@ -1,6 +1,6 @@
-{{#each []}}
-<a class="test-person-item" href="#/{{this.id}}" id="test-item-{{this.id}}">
-    <span class="test-person-item-name">{{this.first_name}}</span>
-    <span class="test-person-item-age">{{this.age}}</span>
+{{#each items}}
+<a class="test-person-item" href="#/{{id}}" id="{{../idPrefix}}{{id}}">
+    <span class="test-person-item-name">{{first_name}}</span>
+    <span class="test-person-item-age">{{age}}</span>
 </a>
 {{/each}}

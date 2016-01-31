@@ -1,7 +1,7 @@
 let Backbone = require('backbone');
 
 let $ = require('jquery');
-//let _ = require('lodash');
+let _ = require('lodash');
 let template = require('./person-list.hbs');
 
 export default Backbone.View.extend({
@@ -10,17 +10,21 @@ export default Backbone.View.extend({
     initialize: function(parent, list){
         this.setElement(parent);
         this.persons = list;
+        this.itemIdPrefix_ = _.uniqueId('test-item-') + '-';
     },
 
     render: function() {
         this.$el.html(
-            this.template(this.persons.toJSON())
+            this.template({
+                items: this.persons.toJSON(),
+                idPrefix: this.itemIdPrefix_
+            })
         );
     },
 
     setPerson: function(id){
         var currentClass = 'current';
         $('.' + currentClass, this.$el).removeClass(currentClass);
-        $('#test-item-' + id).addClass(currentClass);
+        $('#' + this.itemIdPrefix_ + id).addClass(currentClass);
     }
 });

@@ -3,12 +3,12 @@ let Backbone = require('backbone');
 let $ = require('jquery');
 //let _ = require('lodash');
 let templateView = require('./person-info.hbs');
-let templateData = require('./person-info-aside.hbs');
+let templateAside = require('./person-info-aside.hbs');
 let templateContent = require('./person-info-content.hbs');
 
 export default Backbone.View.extend({
     template: templateView,
-    templateData: templateData,
+    templateData: templateAside,
     templateContent: templateContent,
 
     initialize: function(parent){
